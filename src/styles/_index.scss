@@ -1,0 +1,171 @@
+$brandColors: (
+  github:  #232323,
+  douban: #37651c,
+  twitter: #1da1f2,
+  medium: #02b875,
+  instagram: #125688,
+  get-pocket: #c15b5c
+);
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+main {
+  background-image: url(../images/background-sm.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.profile {
+  color: #fff;
+  padding: 12% 20px 0;
+
+  &-card {
+    border-bottom: 1px solid #bbb;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, .8);
+  display: block;
+  height: 80px;
+  margin: 0 auto 1em;
+  width: 80px;
+}
+
+.name {
+  font-family: serif;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  text-align: center;
+  text-shadow: 0 0 1px rgba(0, 0, 0, .5);
+}
+
+.contacts {
+  margin-bottom: 20px;
+  text-align: center;
+
+  .button--outline {
+    border-width: 2px;
+    height: 30px;
+    width: 100px;
+  }
+
+  .separator {
+    display: inline-block;
+    border-left: 2px solid #bbb;
+    height: 1em;
+    margin: 0 1em;
+    vertical-align: middle;
+  }
+}
+
+.social {
+  overflow: hidden;
+
+  a {
+    display: block;
+    float: left;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    width: percentage(1 / 3);
+
+    &:hover,
+    &:active {
+      @each $brand, $color in $brandColors {
+        .icon-#{$brand} {
+          color: $color;
+          text-shadow: none;
+        }
+      }
+    }
+  }
+
+  .icon {
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 32px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-shadow: 0 0 1px rgba(0, 0, 0, .5);
+    transition: color .1s;
+    vertical-align: middle;
+    width: 40px;
+  }
+}
+
+.overlay {
+  display: none;
+}
+
+@media (min-width: $screen-sm-min) {
+  main {
+    background-color: #f4f5f8;
+    background-image: url(../images/background.jpg);
+    position: relative;
+  }
+
+  .profile {
+    left: 0;
+    margin: auto;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 18%;
+    width: 500px;
+
+    &-card {
+      margin: {
+        left: auto;
+        right: auto;
+      }
+      width: 440px;
+    }
+  }
+
+  .avatar {
+    height: 120px;
+    margin-bottom: 20px;
+    width: 120px;
+  }
+
+  .contacts {
+    margin-bottom: 40px;
+  }
+
+  .social {
+    display: table;
+
+    > a {
+      display: table-cell;
+      float: none;
+      height: 50px;
+      line-height: 50px;
+      width: 1%;
+    }
+
+    .icon {
+      font-size: 26px;
+    }
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, .3);
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

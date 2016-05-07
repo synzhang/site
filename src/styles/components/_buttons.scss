@@ -1,0 +1,24 @@
+.button {
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  height: 28px;
+  line-height: 26px;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.button--outline {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+  transition: all .1s;
+
+  &:hover,
+  &:active {
+    background-color: #fff;
+    color: #000;
+  }
+}

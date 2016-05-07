@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'icon';
+  src: url('#{$icomoon-font-path}/icon.eot?umo6aw');
+  src: url('#{$icomoon-font-path}/icon.eot?umo6aw#iefix') format('embedded-opentype'),
+       url('#{$icomoon-font-path}/icon.ttf?umo6aw') format('truetype'),
+       url('#{$icomoon-font-path}/icon.woff?umo6aw') format('woff'),
+       url('#{$icomoon-font-path}/icon.svg?umo6aw#icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-douban {
+  &:before {
+    content: $icon-douban;
+  }
+}
+.icon-google-drive {
+  &:before {
+    content: $icon-google-drive;
+  }
+}
+.icon-telegram {
+  &:before {
+    content: $icon-telegram;
+  }
+}
+.icon-envelope-o {
+  &:before {
+    content: $icon-envelope-o;
+  }
+}
+.icon-twitter {
+  &:before {
+    content: $icon-twitter;
+  }
+}
+.icon-github {
+  &:before {
+    content: $icon-github;
+  }
+}
+.icon-envelope {
+  &:before {
+    content: $icon-envelope;
+  }
+}
+.icon-instagram {
+  &:before {
+    content: $icon-instagram;
+  }
+}
+.icon-medium {
+  &:before {
+    content: $icon-medium;
+  }
+}
+.icon-get-pocket {
+  &:before {
+    content: $icon-get-pocket;
+  }
+}
+
